@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddJobComponent } from './components/add-job/add-job.component';
-import { CsvUploaderComponent } from './components/csv-uploader/csv-uploader.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { JobApplicationComponent } from './components/job-application/job-application.component';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { ProgramsComponent } from './components/programs/programs.component';
+import { TrainingDetailComponent } from './components/training-detail/training-detail.component';
 import { TrainingsComponent } from './components/trainings/trainings.component';
 
 const routes: Routes = [
@@ -14,8 +14,8 @@ const routes: Routes = [
   {path:'view-jobs', component:JobsComponent},
   { path: 'view-jobs/:id', component: JobApplicationComponent },
   { path:'trainings',component:TrainingsComponent},
-  {path:'csv', component:CsvUploaderComponent},
   { path:'programs', component:ProgramsComponent},
+  {path:'trainings/hospitality',component:TrainingDetailComponent},
 ];
 
 @NgModule({

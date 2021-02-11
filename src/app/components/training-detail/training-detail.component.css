@@ -1,0 +1,9 @@
+.banner {
+    background-image:linear-gradient(90deg, rgb(204, 79, 166), rgb(0, 0, 0))
+}
+.banner-title{
+    font-family: OpenSans-Bold;
+    font-size: 34px;
+    line-height: 46px;
+    color: white;
+}

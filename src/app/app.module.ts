@@ -21,9 +21,10 @@ import { TrainingsComponent } from './components/trainings/trainings.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { NgxCsvParserModule } from 'ngx-csv-parser';
-import { CsvUploaderComponent } from './components/csv-uploader/csv-uploader.component';
 import { ProgramsComponent } from './components/programs/programs.component';
+import { TrainingDetailComponent } from './components/training-detail/training-detail.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -35,8 +36,8 @@ import { ProgramsComponent } from './components/programs/programs.component';
     HomepageComponent,
     JobApplicationComponent,
     TrainingsComponent,
-    CsvUploaderComponent,
-    ProgramsComponent
+    ProgramsComponent,
+    TrainingDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { ProgramsComponent } from './components/programs/programs.component';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    NgxCsvParserModule,
+    MatTabsModule,
+    MatExpansionModule
   ],
   providers: [JobService],
   bootstrap: [AppComponent]

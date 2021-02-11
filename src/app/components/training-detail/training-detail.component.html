@@ -1,0 +1,90 @@
+<div class="banner">
+    <div class="container-fluid" style="padding-top: 9%;">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="banner-title">Hospitality and Tourism</div>
+            <br>
+            <p style="color:white">5000 women have registered</p>
+        </div>
+        <div class="col-md-6">
+            <p style="color:white">Offerred by</p>
+            <br>
+            <div class="font" style="font-family: Arial;font-size: large;color:white">Skill India</div>
+            
+        </div>
+    </div>
+    <br>
+    <br>
+    <button mat-raised-button style="margin-bottom: 5%;">Start</button>
+</div>
+</div>
+<div class="row" style="padding:2.5%;">
+    <mat-tab-group style="width:100%">
+        <mat-tab label="About the Course"> 
+        <p style="padding:5%">This couse teaches the basics of Hospitality in the tourism industry. 
+            The Kind of people you will encounter and the skills required to tackle various situations.
+            <br><br>
+            Gain insights from the innovative approaches in the service industry overall, in hospitality and health industry in particular, and better develop innovative strategies in your industry.
+        </p>   
+        </mat-tab>
+        <mat-tab label="Teachers">
+            <br> 
+            <p>The intructors are:</p>
+            <br>
+            <div class="row">
+                <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <h2>Sumee Choi</h2>
+                <br>
+                <h4>Professor at University</h4>
+                <h5>Mumbai</h5>
+            </div>    
+            <div class="col-md-4">
+                <h2>Joseph Santa</h2>
+                <br>
+                <h4>Senior Lead at AirBnB</h4>
+                <h5>Delhi</h5>
+            </div>
+        </div>
+        </mat-tab>
+        <mat-tab label="Lessons Plan"> 
+            <br>
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Lesson 1
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>Brief Introduction about tourism and tourism in India</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Lesson 2
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>Brief Introduction about tourism and tourism in India</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Lesson 3
+                    </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>Brief Introduction about tourism and tourism in India</p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-tab>
+        <mat-tab label="Vidoes and learning material" class="padding:5%"> 
+            <br>
+            <p style="padding:5%">Videos and learning material will be uploaded here. <br><br>
+        You can access it when the course starts </p>
+    </mat-tab>
+      </mat-tab-group>
+</div>
