@@ -51,9 +51,12 @@ Below is a screenshot of the trainings page and alongside is a prototype of what
 
 ![Image of FilterJob](https://github.com/tanvidhope/JobSearchForWomen/blob/main/src/assets/screenshots/trainings.png)
 
+![Image of FilterJob](https://github.com/tanvidhope/JobSearchForWomen/blob/main/src/assets/screenshots/trainingDetail.png)
+
+
 
 ### 4. Programs
 
 This page displays all the available programs centered around women in workforce. For example, certain big companies have programs to help women get back into their work after a break. Some encourage women to try out different paths.
 
-
+![Image of FilterJob](https://github.com/tanvidhope/JobSearchForWomen/blob/main/src/assets/screenshots/programs.png)
