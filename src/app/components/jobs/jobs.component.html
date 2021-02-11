@@ -1,0 +1,77 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-title">Filter Job</div>
+        <br>
+        <form (ngSubmit)="filterJobs()" class="col s6">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" placeholder="" [(ngModel)]=title name="title">
+                    <label>Category</label>
+                </div>
+                <div class="input-field col s6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select City</mat-label>
+                    <mat-select [(ngModel)]="location" name="city">
+                      <mat-option *ngFor="let city of cities" [value]="city">
+                        {{city}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <input type="submit" value="Filter" class="btn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="jobs?.length > 0;else noItems">
+    <ul *ngFor="let job of jobs" class="collection">
+        <li (dblclick)="deleteJob($event, job)" class="collection-item">
+            <a routerLink="{{job.id}}">
+            <h1>{{ job.title }} </h1>
+            <div *ngIf="job.verified">
+                <i class="fa fa-check-circle" aria-hidden="true">Verified</i>
+            </div>
+            <p> <i class="fa fa-inr" aria-hidden="true" style="margin:0.5%"></i>
+                {{ job.salary }}</p>
+            <p> <i class="fa fa-map-marker" aria-hidden="true" style="margin:0.5%"></i>
+                {{job.location }}</p>
+            <p><i class="fa fa-pencil" aria-hidden="true" style="margin:0.5%"></i>
+                {{ job.description }}
+            </p>
+            <p><i class="fa fa-building" aria-hidden="true" style="margin:0.5%"></i>
+                {{job.organization }}</p>
+            </a>
+        </li>
+    </ul>
+</div>
+<hr>
+<br>
+<br><br>
+<ng-template #noItems>
+    <hr>
+    <h5>There are no jobs available</h5>
+</ng-template>
+<h2> More Jobs on Indeed</h2>
+<button mat-raised-button color="primary" (click)="getIndeedJobs()">Click Here</button>
+<div *ngIf="indeedJobs?.length > 0;else noItems">
+    <ul *ngFor="let job of indeedJobs" class="collection">
+        <li class="collection-item">
+            <a>
+            <h1>{{ job.title }} </h1>
+            <div *ngIf="job.verified">
+                <i class="fa fa-check-circle" aria-hidden="true">Verified</i>
+            </div>
+            <p> <i class="fa fa-inr" aria-hidden="true" style="margin:0.5%"></i>
+                {{ job.salary }}</p>
+            <p> <i class="fa fa-map-marker" aria-hidden="true" style="margin:0.5%"></i>
+                {{job.location }}</p>
+            <p><i class="fa fa-pencil" aria-hidden="true" style="margin:0.5%"></i>
+                {{ job.description }}
+            </p>
+            <p><i class="fa fa-building" aria-hidden="true" style="margin:0.5%"></i>
+                {{job.organization }}</p>
+            </a>
+        </li>
+    </ul>
+</div>

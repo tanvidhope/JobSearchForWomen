@@ -1,0 +1,10 @@
+.title{
+    background-color: pink;
+    padding: 1%;
+}
+
+.container {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }

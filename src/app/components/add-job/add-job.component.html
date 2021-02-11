@@ -1,0 +1,63 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-title center">Post a Job Opening</div>
+        <br>
+        <p>Post your requiremnets below</p>
+        <form (ngSubmit)="onSubmit()" class="col s6">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.title name="title">
+                    <label>Title</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.salary name="description">
+                    <label>Monthly Salary (Ex:10000-15000)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.openings name="description">
+                    <label>Number of Openings (Ex: 2)</label>
+                </div>
+            </div>
+            
+            <!-- <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" placeholder="Add Description" [(ngModel)]=job.location name="description">
+                    <label>Location</label>
+                </div>
+            </div> -->
+            <mat-form-field appearance="fill">
+                <mat-label>Select City</mat-label>
+                <mat-select [(ngModel)]="job.location" name="city">
+                  <mat-option *ngFor="let city of cities" [value]="city">
+                    {{city}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.description name="description">
+                    <label>Job Description</label>
+                </div>
+            </div>
+            <hr>
+            <div class="center"><h2>About your company</h2></div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.organization name="description">
+                    <label>Company name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" [(ngModel)]=job.contact name="contact">
+                    <label>Contact Number</label>
+                </div>
+            </div>
+            <input type="submit" value="Submit" class="btn" style="width:100%">
+        </form>
+    </div>
+</div>

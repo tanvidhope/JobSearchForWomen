@@ -1,0 +1,27 @@
+<br>
+<div class="title">
+    <h1 class="center">Some Programs to help women restart their careers and upskill</h1>
+</div>
+<br>
+
+<div *ngIf="programs?.length > 0;else noItems">
+    <ul *ngFor="let program of programs" class="collection">
+        <li class="collection-item">
+            <a routerLink="{{program.id}}">
+            <h1>{{ program.name }} </h1>
+            <p><i class="fa fa-building" aria-hidden="true" style="margin:0.5%"></i>
+                {{program.organization }}</p>
+            </a>
+            <p><i class="fa fa-pencil" aria-hidden="true" style="margin:0.5%"></i>
+                {{ program.description }}
+            </p>
+        </li>
+    </ul>
+</div>
+<hr>
+<br>
+<br><br>
+<ng-template #noItems>
+    <hr>
+    <h5>There are no jobs available</h5>
+</ng-template>

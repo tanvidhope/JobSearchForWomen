@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sheworks-1cf52": {
+      "hosting": {
+        "SheWorks": [
+          "sheworks-1cf52"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sheworks-1cf52"
+  }
+}
