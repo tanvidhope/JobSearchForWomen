@@ -57,7 +57,7 @@
 <div *ngIf="indeedJobs?.length > 0;else noItems">
     <ul *ngFor="let job of indeedJobs" class="collection">
         <li class="collection-item">
-            <a>
+            <a href="{{job.url}}">
             <h1>{{ job.title }} </h1>
             <div *ngIf="job.verified">
                 <i class="fa fa-check-circle" aria-hidden="true">Verified</i>
